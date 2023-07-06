@@ -15,7 +15,7 @@ const __dirname = path.resolve()
 import { Server } from 'socket.io'
 import mediasoup from 'mediasoup'
 
-app.get('*', (req, res, next) => {
+app.get('*', (req, res, next) => { 
   const path = '/sfu/'
 
   if (req.path.indexOf(path) == 0 && req.path.length > path.length) return next()
@@ -28,7 +28,7 @@ app.use('/sfu/:room', express.static(path.join(__dirname, 'public')))
 // SSL cert for HTTPS access
 const options = {
   // key: fs.readFileSync('./server/ssl/key.pem', 'utf-8'),
-  // cert: fs.readFileSync('./server/ssl/cert.pem', 'utf-8')
+  // cert: fs.readFileSync('./server/ssl/cert.pem', 'utf-8') 
 }
 
 const httpsServer = https.createServer(options, app)
@@ -430,7 +430,7 @@ const createWebRtcTransport = async (router) => {
           {
             ip: '0.0.0.0', // replace with relevant IP address
             announcedIp: '192.168.128.247',
-          }
+          } 
         ],
         enableUdp: true,
         enableTcp: true,
