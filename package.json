@@ -1,0 +1,24 @@
+{
+  "name": "webrtcmediasoup",
+  "version": "1.0.0",
+  "description": "webrtc mediasoup trial1",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "watch": "watchify public/index.js -o public/bundle.js -v"
+  },
+  "author": "Sreejit",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.18.2",
+    "httpolyglot": "^0.1.2",
+    "mediasoup": "^3.12.4",
+    "mediasoup-client": "^3.6.93",
+    "nodemon": "^2.0.22",
+    "socket.io": "^4.7.1",
+    "socket.io-client": "^4.7.1",
+    "watchify": "^4.0.0"
+  }
+}
